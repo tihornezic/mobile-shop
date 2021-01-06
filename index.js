@@ -10,7 +10,6 @@ $(document).ready(function () {
     });
 
     // top sale owl carousel
-
     $("#top-sale .owl-carousel").owlCarousel({
         loop: true,
         nav: true,
@@ -41,6 +40,41 @@ $(document).ready(function () {
     $(".button-group").on("click", "button", function(){
         var filterValue = $(this).attr('data-filter');
         $grid.isotope({filter: filterValue});
+    });
+
+    // new phones owl carousel
+    $("#new-phones .owl-carousel").owlCarousel({
+        loop: true,
+        nav: false,
+        dots: true,
+        responsive: {
+            // for window greater than 0 viewport
+            0: {
+                items: 1
+            },
+            // for window greater than 600 vp
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 5
+            }
+        }
+    });
+
+    // blogs owl carousel
+    $("#blogs .owl-carousel").owlCarousel({
+        loop: true,
+        nav: false,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            }
+        }
     });
 
 });

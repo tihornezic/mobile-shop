@@ -10,10 +10,14 @@ button, button:focus {
 }
 
 .container-max-width {
-  max-width: 1210px;
+  max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
-  padding: 0 52px;
+  padding: 0 40px;
+}
+
+.gap-6 {
+  gap: 6rem !important;
 }
 
 .font-baloo {
