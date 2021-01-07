@@ -47,6 +47,8 @@ $(document).ready(function () {
         loop: true,
         nav: false,
         dots: true,
+        autoplay: true,
+        autoplayTimeout: 4000,
         responsive: {
             // for window greater than 0 viewport
             0: {
@@ -84,10 +86,12 @@ $(document).ready(function () {
     // product quantity section
     let $qty_down = $(".qty .qty-down");
     let $qty_up = $(".qty .qty-up");
-    let $input = $(".qty .qty_input");
+    // let $input = $(".qty .qty_input");
 
     // click event on qty up button
     $qty_up.click(function (e) {
+        // returns the data id of the button
+        let $input = $(`.qty_input[data-id='${$(this).data("id")}']`);
         if ($input.val() >= 1 && $input.val() <= 9) {
             // i = current index, val = current value
             $input.val(function (i, val) {
@@ -98,11 +102,15 @@ $(document).ready(function () {
 
     // click event on qty down button
     $qty_down.click(function (e) {
+        let $input = $(`.qty_input[data-id='${$(this).data("id")}']`);
         if ($input.val() > 1 && $input.val() <= 10) {
             $input.val(function (i, val) {
                 return --val;
             });
         }
     });
+
+
+
 
 });
