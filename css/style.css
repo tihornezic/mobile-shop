@@ -114,4 +114,8 @@ button, button:focus {
   margin-top: 1rem;
 }
 
+#product #policy a:hover {
+  color: #00A5C4 !important;
+}
+
 /*# sourceMappingURL=style.css.map */

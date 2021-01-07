@@ -37,7 +37,7 @@ $(document).ready(function () {
     });
 
     // filter items on button click
-    $(".button-group").on("click", "button", function(){
+    $(".button-group").on("click", "button", function () {
         var filterValue = $(this).attr('data-filter');
         $grid.isotope({filter: filterValue});
     });
@@ -74,6 +74,34 @@ $(document).ready(function () {
             600: {
                 items: 3
             }
+        }
+    });
+
+
+
+    
+
+    // product quantity section
+    let $qty_down = $(".qty .qty-down");
+    let $qty_up = $(".qty .qty-up");
+    let $input = $(".qty .qty_input");
+
+    // click event on qty up button
+    $qty_up.click(function (e) {
+        if ($input.val() >= 1 && $input.val() <= 9) {
+            // i = current index, val = current value
+            $input.val(function (i, val) {
+                return ++val;
+            });
+        }
+    });
+
+    // click event on qty down button
+    $qty_down.click(function (e) {
+        if ($input.val() > 1 && $input.val() <= 10) {
+            $input.val(function (i, val) {
+                return --val;
+            });
         }
     });
 
