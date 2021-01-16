@@ -1,0 +1,28 @@
+CREATE TABLE `product` (
+  `item_id` int(11) NOT NULL,
+  `item_brand` varchar(200) NOT NULL,
+  `item_name` varchar(255) NOT NULL,
+  `item_price` double(10,2) NOT NULL,
+  `item_image` varchar(255) NOT NULL,
+  `item_register` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`item_id`);
+
+ALTER TABLE `product` CHANGE `item_id` `item_id` INT(11) NOT NULL AUTO_INCREMENT;
+
+INSERT INTO `product` (`item_id`, `item_brand`, `item_name`, `item_price`, `item_image`, `item_register`) VALUES
+(1, 'Samsung', 'Samsung Galaxy S6 Edge', 179.00, './assets/products/1.png', NOW()),
+(2, 'Xiaomi', 'Redmi Note 7', 158.99, './assets/products/2.png', NOW()),
+(3, 'Xiaomi', 'Redmi Note 7 Pro', 139.98, './assets/products/3.png', NOW()),
+(4, 'Xiaomi', 'Redmi 9i', 122.88, './assets/products/4.png', NOW()),
+(5, 'Xiaomi', 'Mi 10T Pro 5G', 169.99, './assets/products/5.png', NOW()),
+(6, 'Xiaomi', 'Redmi Note 8', 111.96, './assets/products/6.png', NOW()),
+(7, 'Xiaomi', 'Redmi Note 9', 145.00, './assets/products/8.png', NOW()),
+(8, 'Xiaomi', 'Black Shark 3', 109.00, './assets/products/10.png', NOW()),
+(9, 'Samsung', 'Samsung Galaxy S6', 162.99, './assets/products/11.png', NOW()),
+(10, 'Samsung', 'Samsung Galaxy S7', 187.77, './assets/products/12.png', NOW()),
+(11, 'Apple', 'Apple iPhone X', 319.89, './assets/products/13.png', NOW()),
+(12, 'Apple', 'Apple iPhone 6', 262.00, './assets/products/14.png', NOW()),
+(13, 'Apple', 'Apple iPhone 7', 299.92, './assets/products/15.png', NOW());
