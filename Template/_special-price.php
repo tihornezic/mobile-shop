@@ -5,6 +5,7 @@
     $unique_brands = array_unique($brands);
     sort($unique_brands);
     // print_r($unique_brands);
+    shuffle($product_shuffle);
 ?>
 
 <section id="special-price">

@@ -1,5 +1,6 @@
 <?php
-$product_shuffle = $product->getData();
+    $product_shuffle = $product->getData();
+    shuffle($product_shuffle);
 ?>
 
 <section id="top-sale">
@@ -22,7 +23,7 @@ $product_shuffle = $product->getData();
                                 <span><i class="far fa-star"></i></span>
                             </div>
                             <div class="price py-2">
-                                <span><?php echo $item['item_price']?></span>
+                                <span>$<?php echo $item['item_price']?></span>
                             </div>
                             <button type="submit" class="btn btn-warning font-size-14">Add to Cart</button>
                         </div>
