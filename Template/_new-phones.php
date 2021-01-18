@@ -1,4 +1,5 @@
 <?php
+    $product_shuffle = $product->getData();
     shuffle($product_shuffle);
 ?>
 
@@ -10,7 +11,7 @@
             <?php array_map(function ($item) { ?>
                 <div class="item py-2 bg-light">
                     <div class="product">
-                        <a href="#"><img src="<?php echo $item['item_image'] ?>" alt="product1" class="img-fluid"></a>
+                        <a href="product.php?item_id=<?php echo $item['item_id']; ?>"><img src="<?php echo $item['item_image'] ?>" alt="product1" class="img-fluid"></a>
                         <div class="text-center">
                             <h6><?php echo $item['item_name'] ?></h6>
                             <div class="rating text-warning">
